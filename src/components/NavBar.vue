@@ -22,7 +22,9 @@ export default {
       coins: ['BTC',
       'ETH',
       'AXS',
-      ]
+      'CASH'
+      ],
+      msg: "Bitcoin"
     }
   },
   methods:{ 

@@ -36,7 +36,6 @@ export default {
 div .card{
   margin: 10px;
   max-width: 20rem;
-  
   cursor: pointer;
 }
 </style>
