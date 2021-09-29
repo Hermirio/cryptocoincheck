@@ -1,15 +1,12 @@
 <template>
   <div>
-    <div class="teste">
-      <div>
-        <b-card-group deck>
-      <b-card  bg-variant="dark" text-variant="white" style="max-width: 20rem;" class="text-center" v-for="(item, index) in coin.ticker" v-bind:key="(item, index)">
-        <b-card-header class="center">{{index}}</b-card-header>
-        <b-card-text>{{item}}</b-card-text>
-      </b-card>      
-       </b-card-group>
-       <br>
-      </div>
+    <div>
+      <b-card-group deck>
+        <b-card  bg-variant="dark" text-variant="white"  class="text-center" v-for="(item, index) in coin.ticker" v-bind:key="(item, index)">
+          <b-card-header>{{index}}</b-card-header>
+          <b-card-text>{{item}}</b-card-text>
+        </b-card>      
+      </b-card-group>
     </div>
   </div>
 </template>
@@ -36,9 +33,10 @@ export default {
 }
 </script>
 <style>
-.teste{
-  margin: auto;
-  transform: translateY(-5px);
+div .card{
+  margin: 10px;
+  max-width: 20rem;
+  
   cursor: pointer;
 }
 </style>

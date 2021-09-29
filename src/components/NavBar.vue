@@ -2,29 +2,39 @@
   <div>
     <b-navbar type="dark" variant="dark">
       <b-navbar-nav>
-        <b-nav-item href="#">Home</b-nav-item>
-
-        <!-- Navbar dropdowns -->
-        <b-nav-item-dropdown text="Coin" right>
-          <b-dropdown-item href="#">BTC</b-dropdown-item>
-          <b-dropdown-item href="#">ETH</b-dropdown-item>
-          <b-dropdown-item href="#">CASH</b-dropdown-item>
-          <b-dropdown-item href="#">AXS</b-dropdown-item>
+        <b-nav-item href="#">{{msg}}</b-nav-item>
+        <b-nav-item-dropdown v-model="msg" text="Coin" right>
+          <b-dropdown-item href="#" v-for="coin in coins" v-bind:key="coin">{{coin}}</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-navbar>
-  </div>
+    <div>
+      <h2> {{msg}} </h2>
+    </div> 
+  </div>   
 </template>
 
 <script>
 export default {
   name: 'NavBar',
-  props: {
-    msg: String
+  data(){
+    return{
+      coins: ['BTC',
+      'ETH',
+      'AXS',
+      ]
+    }
+  },
+  methods:{ 
+    
   }
 }
 </script>
 
 <style scoped>
-
+  h2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
 </style>
